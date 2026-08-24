@@ -118,6 +118,16 @@ tasks.withType(JavaCompile) {
     options.compilerArgs.add '-XDstringConcat=inline'
 }
 
+javadoc {
+    configure(options) {
+        options.addBooleanOption("-allow-script-in-comments",true)
+        options.addStringOption("link", "https://github.wpilib.org/allwpilib/docs/release/java/")
+        options.header = "<script type=\"text/javascript\" async" +
+            "  src=\"https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML\">" +
+            "</script>"
+    }
+}
+
 // Create version file
 project.compileJava.dependsOn(createVersionFile)
 gversion {
