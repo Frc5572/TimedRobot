@@ -64,6 +64,9 @@
   "java.format.settings.profile": "GoogleStyle",
   "[java]": {
     "editor.defaultFormatter": "redhat.java",
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false
   },
   "editor.codeActionsOnSave": {
     "source.organizeImports": "explicit"
